@@ -7,17 +7,59 @@ By doing this, we:
 
 OSDG-mapping integrates the existing research into a comprehensive approach, and does so in a way that evades the shortcomings of former individual approaches and duplication of research efforts.
 
-## How does OSDG-mapping work?
-OSDG-mapping processes user queries in the following steps:
-1) It tags the user query with FOS’es from Microsoft Academic Graph (MAG);
-2) It cross-references the FOS’es assigned to the user query with the OSDG Ontology and determines which SDGs (if any) are relevant for the query;  
-3) The relevance of a SDG to a query is interpreted as being “Strong” or “Moderate” depending on a specific threshold that is specifically adjusted for each SDG by testing the tool on a set of 16 000 scientific publication abstracts).
+## What OSDG-mapping is for?
+OSDG-mapping constructs SDG relevant FOS ontology which is an important element of [OSDG-tool](https://github.com/osdg-ai/osdg-tool) .
 
 <p align="center">
-  <img src="/images/Methodology-visual_0511_Updated.png" alt="OSDG_Logo" width="400"/>
+  <img src="/images/Methodology-visual_0511_Updated.png" alt="OSDG_Logo" width="750"/>
 </p>
 
 Head to the Search page to put our methodology to practical use. If you see something that requires improvement or you would like to contact our data team, please state your enquiry using our contact form.
+
+
+## Procedure
+
+Assigned labels from raw data sources are assembled in two steps:
+1. Assembling terms `AssemblingTerms.py`\
+**Assembles terms from `raw_data/0_add/` data sources.**
+    * *Term label conflicts from sources `00_add_validated/` are ignored meaning if `term_1` is assigned to `SDG_1` by `source_1` and to `SDG_2` by `source_2` **&rarr;** `term_1` is assigned to both.*
+    * *Conflicts for term labels from `01_add_generated/` data sources are managed in two ways:* 
+        - *If the conflict is between validated and generated term label **&rarr;** generated term label is discarded while validated one remains.*
+        - *If the conflict is between generated & generated **&rarr;** both are discarded.*
+
+    **&rarr;** **produces** `InterimTerms.json`
+    ```python
+    {
+        'SDG_1': {
+            'term_1': ['source_1', 'source_2', ...],
+            'term_2': ['source_1', 'source_3', ...]
+            ...
+        }
+        ...
+    }
+    ```
+2. Assembling OSDG Ontology `AssemblingOntology.py`\
+    **Assembles FOS from `InterimTerms.json` and `02_add_all_to_all/` data sources.**
+    * 2.1. *Terms from `InterimTerms.json` are matched to  MAG Fields of Study subset `FOSMAP.json` which contains over 150 thousand fields.*
+    * 2.2. *Matched FOS are added to the final ontology `FOS-Ontology.json` .*
+    * 2.3. *`02_add_all_to_all/` FOS are added to the final ontology `FOS-Ontology.json` .*
+    * 2.4 *Final ontology `OSDG-Ontology.json` is adjusted based on `1_replace/` and `2_remove/` .*
+
+
+    **&rarr;** **produces** `OSDG-Ontology.json`
+    ```python
+    {
+        'SDG_1': ['fos_id_1', 'fos_id_2', ...],
+        'SDG_2': ['fos_id_3', 'fos_id_4', ...]
+        ...
+    }
+    ```
+
+ 
+****
+
+
+
 ## References and inspiration
 
 The list of data sources used in the current version of the OSDG Tool are [here](https://github.com/TechNote-ai/osdg/blob/master/OSDG_DATA_SOURCES.md). OSDG leverages the data from [Microsoft Academic](https://academic.microsoft.com/home):
