@@ -1,5 +1,8 @@
 ## About the project
 In short, OSDG-mapping builds an **integrated ontology** from the feature sets identified in previous research, and then matches the ontology items to the topics from [Microsoft Academic](https://academic.microsoft.com/home).
+
+**Check out our paper on ArXiv [OSDG -- Open-Source Approach to Classify Text Data by UN Sustainable Development Goals (SDGs)](https://arxiv.org/abs/2005.14569)**
+
 OSDG takes relevant text features (such as ontology items, features from machine-learning models or extracted keywords) from the previous research, cleans them and merges them into a comprehensive, constantly-growing OSDG ontology. The ontology items are mapped to the ever-growing list of topics/Fields of Study in the Microsoft Academic Graph (MAG).
 By doing this, we:
 - expand the ontology – acquire more key terms associated with the relevant MAG Topics, natively called Fields of Study (FOS);
