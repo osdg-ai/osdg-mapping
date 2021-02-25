@@ -17,8 +17,6 @@ OSDG-mapping constructs SDG relevant FOS ontology which is an important element 
   <img src="/images/Methodology-visual_0511_Updated.png" alt="OSDG_Logo" width="750"/>
 </p>
 
-Head to the Search page to put our methodology to practical use. If you see something that requires improvement or you would like to contact our data team, please state your enquiry using our contact form.
-
 
 ## Procedure
 
