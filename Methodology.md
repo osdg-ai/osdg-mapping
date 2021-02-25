@@ -1,22 +1,21 @@
-## Methodology
-OSDG aims to:
+OSDG-mapping aims to:
 - integrate various existing attempts to classify research according to SustainableDevelopment Goals,
 - make this process open, transparent and user-friendly.
 
-OSDG integrates the existing research into a comprehensive approach, and does so in a way that evades the shortcomings of former individual approaches and duplication of research efforts.
+OSDG-mapping integrates the existing research into a comprehensive approach, and does so in a way that evades the shortcomings of former individual approaches and duplication of research efforts.
 
 <p align="center">
   <img src="/images/Methodology-visual_0511_Updated.png" alt="OSDG_Logo" width="400"/>
 </p>
 
 ## About the project
-In short, OSDG builds an **integrated ontology** from the feature sets identified in previous research, and then matches the ontology items to the topics from [Microsoft Academic](https://academic.microsoft.com/home).
+In short, OSDG-mapping builds an **integrated ontology** from the feature sets identified in previous research, and then matches the ontology items to the topics from [Microsoft Academic](https://academic.microsoft.com/home).
 OSDG takes relevant text features (such as ontology items, features from machine-learning models or extracted keywords) from the previous research, cleans them and merges them into a comprehensive, constantly-growing OSDG ontology. The ontology items are mapped to the ever-growing list of topics/Fields of Study in the Microsoft Academic Graph (MAG).
 By doing this, we:
 - expand the ontology – acquire more key terms associated with the relevant MAG Topics, natively called Fields of Study (FOS);
 - capture more nuanced relationships between individual terms and latent concepts.
 
-## How does OSDG work?
+## How does OSDG-mapping work?
 OSDG processes user queries in the following steps:
 1) It tags the user query with FOS’es from Microsoft Academic Graph (MAG);
 2) It cross-references the FOS’es assigned to the user query with the OSDG Ontology and determines which SDGs (if any) are relevant for the query;  
