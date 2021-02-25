@@ -8,7 +8,7 @@ By doing this, we:
 OSDG-mapping integrates the existing research into a comprehensive approach, and does so in a way that evades the shortcomings of former individual approaches and duplication of research efforts.
 
 ## How does OSDG-mapping work?
-OSDG processes user queries in the following steps:
+OSDG-mapping processes user queries in the following steps:
 1) It tags the user query with FOS’es from Microsoft Academic Graph (MAG);
 2) It cross-references the FOS’es assigned to the user query with the OSDG Ontology and determines which SDGs (if any) are relevant for the query;  
 3) The relevance of a SDG to a query is interpreted as being “Strong” or “Moderate” depending on a specific threshold that is specifically adjusted for each SDG by testing the tool on a set of 16 000 scientific publication abstracts).
