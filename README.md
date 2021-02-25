@@ -62,7 +62,7 @@ Assigned labels from raw data sources are assembled in two steps:
 
 ## References and inspiration
 
-The list of data sources used in the current version of the OSDG Tool are [here](https://github.com/TechNote-ai/osdg/blob/master/OSDG_DATA_SOURCES.md). OSDG leverages the data from [Microsoft Academic](https://academic.microsoft.com/home):
+The list of data sources used in the current version of the OSDG Tool are [here](https://github.com/osdg-ai/osdg-mapping/blob/master/OSDG_DATA_SOURCES.md). OSDG leverages the data from [Microsoft Academic](https://academic.microsoft.com/home):
 
 1) Sinha, A., Shen, Z., Song, Y., Ma, H., Eide, D., Hsu, B.-J. & Wang, K. (2015). AnOverview of Microsoft Academic Service (MAS) and Applications. Proceedings of the24th International Conference on World Wide Web (p./pp. 243--246), Republic andCanton of Geneva, Switzerland: International World Wide Web Conferences SteeringCommittee. ISBN: 978-1-4503-3473-0. doi:10.1145/2740908.27428398.
 2) Wang, K., Shen, Z., Huang, C., Wu, C., Eide, D., Dong, Y., Qian, J., Kanakia, A., Chen,A.C., & Rogahn, R. (2019). A Review of Microsoft Academic Services for Science ofScience Studies. Frontiers in Big Data, 2. doi:10.3389/FDATA.2019.00045
